@@ -1,0 +1,22 @@
+[package]
+name = "m2k"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+windows = { version = "0.52.0", features = [
+    "Devices_Enumeration",
+    "Devices_Midi",
+    "Foundation_Collections",
+    "Win32_Foundation",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_WindowsAndMessaging",
+] }
+toml = { version = "0.8.8", features = ["parse"], default-features = false }
+dialoguer = { version = "0.11.0", features = [
+    "fuzzy-select",
+], default-features = false }
+ctrlc = "3.4.1"
+miette = { version = "5.10.0", features = ["fancy-no-backtrace"] }
+thiserror = "1.0.50"
+serde = { version = "1.0.193", features = ["derive"] }
